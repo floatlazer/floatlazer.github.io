@@ -1,161 +1,291 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1SFR72BRKX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-1SFR72BRKX"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-1SFR72BRKX');
-</script>
+      gtag('config', 'G-1SFR72BRKX');
+    </script>
    
-	<title>Xuan Zhang</title>
-    <meta charset="utf-8"> 
-	<style>
-		body, html {
-			margin: 0;
-			padding: 0;
-		}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xuan Zhang | Texas A&M University</title>
+    
+    <style>
+        /* CSS Variables */
+        :root {
+            --primary-color: #500000; /* Texas A&M Maroon */
+            --text-dark: #222222;
+            --text-main: #333333;
+            --text-muted: #666666;
+            --bg-color: #f4f5f7;
+            --card-bg: #ffffff;
+        }
 
-		body {
-			font-size: 18px; /* Default font size for the whole page */
-			font-family: Arial, sans-serif;
-			line-height: 1.4;
-		}
-		
-		h1 {
-			font-size: 32px; /* Larger font size for main headings */
-		}
-		
-		p {
-			font-size: 18px; /* Specific font size for paragraphs if different from the default */
-		}
+        /* Base Reset & Typography */
+        * {
+            box-sizing: border-box;
+        }
 
-		td {
-			padding: 4px 8px; /* Reduced padding */
-			font-size: 18px; /* Optional: smaller font size for compactness */
-		}
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            font-size: 16px;
+        }
 
-		.container {
-			max-width: 1000px; /* Set the maximum width */
-			margin: 0 auto; /* This centers the container */
-			padding: 20px; /* Optional: Adds some space inside the container */
-			word-wrap: break-word; /* Ensures long words will wrap and not overflow */
-		}
-		
-		ul.pub-spacing {
-			line-height: 1.2em;
-		}
-		
-		ul.pub-spacing li{
-			margin-bottom: 1em;
-		}
+        /* Layout */
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 50px;
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            border-top: 6px solid var(--primary-color);
+        }
 
-	</style>		
+        /* Profile Header */
+        header {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            margin-bottom: 30px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #eeeeee;
+        }
+
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 3px solid #f0f0f0;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .profile-info h1 {
+            font-size: 2.2rem;
+            color: var(--text-dark);
+            margin: 0 0 10px 0;
+            font-weight: 700;
+        }
+
+        .profile-info p {
+            margin: 4px 0;
+            font-size: 1rem;
+        }
+
+        /* Links */
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .social-links {
+            margin-top: 15px;
+            font-size: 0.95rem;
+        }
+        
+        .social-links a {
+            margin-right: 12px;
+            font-weight: 600;
+        }
+
+        /* Job Market Alert */
+        .job-alert {
+            background-color: #fff9e6;
+            border-left: 4px solid #ffc107;
+            padding: 12px 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+            color: #856404;
+            font-weight: 500;
+            display: inline-block;
+        }
+
+        /* Section Headings */
+        h2 {
+            font-size: 1.4rem;
+            color: var(--text-dark);
+            border-bottom: 2px solid #eaeaea;
+            padding-bottom: 8px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+        }
+
+        /* Structured Lists (Publications, Software, Slides) */
+        ul.item-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        ul.item-list li {
+            margin-bottom: 24px;
+            padding-left: 0;
+        }
+
+        .item-title {
+            display: block;
+            color: var(--text-dark);
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .item-authors {
+            display: block;
+            color: var(--text-main);
+            margin-bottom: 4px;
+        }
+
+        .item-venue {
+            display: block;
+            color: var(--text-muted);
+            font-style: italic;
+            font-size: 0.95rem;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+            .container {
+                padding: 30px 20px;
+                margin: 0 15px;
+            }
+        }
+    </style>        
 </head>
 <body>
 
 <div class="container">
-
-    <table>
-		<tbody>
-			<tr>
-				<td width="323">
-					<p align="center"><img border="0" src="assets/me.JPG" width="240"></p>
-				</td>
-				<td>
-					<p><font size="6"><b>&nbsp;Xuan Zhang</b></font></p>
-					<p>&nbsp; Ph.D. Student</font><br>
-					&nbsp; Department of Computer Science &amp Engineering</font><br>
-					&nbsp; Texas A&M University, TX, USA</font><br>
-					&nbsp; L.F. Peterson Building. 435 Nagle Street</font><br>
-					&nbsp; Email: xuan.zhang@tamu.edu</font><br>
-					&nbsp; <a href="https://scholar.google.com/citations?user=DrsDZg4AAAAJ&hl=en">Google Scholar</a> |
-					<a href="https://github.com/floatlazer" target="_blank">GitHub</a> |
-					<a href="https://twitter.com/floatlazer" target="_blank">Twitter</a> |
-					<a href="https://www.linkedin.com/in/xuan-zhang-a43400106/" target="_blank">LinkedIn</a></p>
-				</td>
-			</tr>
-		</tbody>
-	</table>
     
+    <header>
+        <img src="assets/me.JPG" alt="Portrait of Xuan Zhang" class="profile-img">
+        <div class="profile-info">
+            <h1>Xuan Zhang</h1>
+            <p><strong>Ph.D. Student</strong></p>
+            <p>Department of Computer Science &amp; Engineering</p>
+            <p>Texas A&M University, TX, USA</p>
+            <p>L.F. Peterson Building, 435 Nagle Street</p>
+            <p>Email: <a href="mailto:xuan.zhang@tamu.edu">xuan.zhang@tamu.edu</a></p>
+            <div class="social-links">
+                <a href="https://scholar.google.com/citations?user=DrsDZg4AAAAJ&hl=en" target="_blank">Google Scholar</a> |
+                <a href="https://github.com/floatlazer" target="_blank">GitHub</a> |
+                <a href="https://twitter.com/floatlazer" target="_blank" aria-label="X Profile" style="display: inline-flex; align-items: center; gap: 4px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="14" height="14" fill="currentColor" style="position: relative; top: 2px;">
+                        <path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/>
+                    </svg>
+                </a> |
+                <a href="https://www.linkedin.com/in/xuan-zhang-a43400106/" target="_blank">LinkedIn</a>
+            </div>
+        </div>
+    </header>
     
-    <p>Hello, I am Xuan Zhang. I am a final-year PhD student advised by <a href="https://people.tamu.edu/~sji/" target="_blank">Prof. Shuiwang Ji</a>. I am interested in methods and applications of <b>deep learning</b>. My current research focus is <b>developing deep learning methods for scientific problems</b>, including deep-learning-based <b>physics simulation</b> and <b>computational chemistry</b>.<br>
-	I received my master's degree in engineering from Shanghai Jiao Tong University, my engineering degree from ENSTA Paris (equivalent to master's degree), and my bachelor's degree from Shanghai Jiao Tong University.<br>
-	I am on 2026 job market.
-    </p>
+    <main>
+        <section class="bio">
+            <p>Hello, I am Xuan Zhang. I am a final-year PhD student advised by <a href="https://people.tamu.edu/~sji/" target="_blank">Prof. Shuiwang Ji</a>. I am interested in the methods and applications of <b>deep learning</b>. My current research focus is <b>developing deep learning methods for scientific problems</b>, including deep-learning-based <b>physics simulation</b> and <b>computational chemistry</b>.</p>
 
-	<hr>
-	
-    <h2>Publications</h2>
-    
-	<ul class="pub-spacing">
-		<li>
-			<b>Orbital Transformers for Predicting Wavefunctions in Time-Dependent Density Functional Theory</b><br>
-			<b>Xuan Zhang</b>, Haiyang Yu, Chengdong Wang, Jacob Helwig, Shuiwang Ji, Xiaofeng Qian<br>
-			In International Conference on Learning Representations (ICLR 2026)
-		</li>
-		<li>
-			<b>A Two-Phase Deep Learning Framework for Adaptive Time-Stepping in High-Speed Flow Modeling</b><br>
-			Jacob Helwig, Sai Sreeharsha Adavi, <b>Xuan Zhang</b>, Yuchao Lin, Felix S. Chim, Luke Takeshi Vizzini, Haiyang Yu, Muhammad Hasnain, Saykat Kumar Biswas, John J. Holloway, Narendra Singh, N. K. Anand, Swagnik Guhathakurta, Shuiwang Ji
-			In International Conference on Learning Representations (ICLR 2026)
-		</li>
-		<li>
-			<b>SineNet: Learning Temporal Dynamics in Time-Dependent Partial Differential Equations</b><br>
-			<b>Xuan Zhang*</b>, Jacob Helwig*, Yuchao Lin, Yaochen Xie, Cong Fu, Stephan Wojtowytsch, Shuiwang Ji<br>
-			In International Conference on Learning Representations (ICLR 2024)
-		</li>
-		<li>
-			<b>Artificial Intelligence for Science in Quantum, Atomistic, and Continuum Systems</b><br>
-			<b>Xuan Zhang*</b>, Limei Wang*, Jacob Helwig*, Youzhi Luo*, Cong Fu*, Yaochen Xie*, Meng Liu, Yuchao Lin, Zhao Xu, Keqiang Yan, Keir Adams, Maurice Weiler, Xiner Li, Tianfan Fu, Yucheng Wang, Haiyang Yu, YuQing Xie, Xiang Fu, Alex Strasser, Shenglong Xu, Yi Liu, Yuanqi Du, Alexandra Saxton, Hongyi Ling, Hannah Lawrence, Hannes Stärk, Shurui Gui, Carl Edwards, Nicholas Gao, Adriana Ladera, Tailin Wu, Elyssa F. Hofgard, Aria Mansouri Tehrani, Rui Wang, Ameya Daigavane, Montgomery Bohde, Jerry Kurtin, Qian Huang, Tuong Phung, Minkai Xu, Chaitanya K. Joshi, Simon V. Mathis, Kamyar Azizzadenesheli, Ada Fang, Alán Aspuru-Guzik, Erik Bekkers, Michael Bronstein, Marinka Zitnik, Anima Anandkumar, Stefano Ermon, Pietro Liò, Rose Yu, Stephan Günnemann, Jure Leskovec, Heng Ji, Jimeng Sun, Regina Barzilay, Tommi Jaakkola, Connor W. Coley, Xiaoning Qian, Xiaofeng Qian, Tess Smidt, Shuiwang Ji<br>
-			Foundations and Trends in Machine Learning. <a href="https://www.air4.science" target="_blank">https://www.air4.science</a>
-		</li>
-		<li>
-			<b>Group Equivariant Fourier Neural Operators for Partial Differential Equations</b><br>
-			Jacob Helwig*, <b>Xuan Zhang*</b>, Cong Fu, Jerry Kurtin, Stephan Wojtowytsch, Shuiwang Ji<br>
-			In International Conference on Machine Learning (ICML 2023)
-		</li>
-		<li> 
-			<b>A Score-Based Model for Learning Neural Wavefunctions</b><br>
-			<b>Xuan Zhang</b>, Shenglong Xu, Shuiwang Ji<br>
-			arXiv:2305.16540
-		</li>
-		<li>
-			<b>Lattice Convolutional Networks for Learning Ground states of Quantum Many-Body Systems</b><br>
-			Cong Fu*, <b>Xuan Zhang*</b>, Shenglong Xu, Shuiwang Ji<br>
-			SIAM International Conference on Data Mining (SDM 2023)
-		</li>
-		<li>
-			<b>Fast Quantum Property Prediction via Deeper 2D and 3D Graph Networks</b><br>
-			Meng Liu*, Cong Fu*, <b>Xuan Zhang</b>, Limei Wang, Yaochen Xie, Hao Yuan, Youzhi Luo, Zhao Xu, Shenglong Xu, Shuiwang Ji<br>
-			Tech Report, KDD Cup 2021, Runner-up award on OGB-LSC
-		</li>
-		<li>
-			<b>Quaternion Product Units for Deep Learning on 3D Rotation Groups</b><br>
-			<b>Xuan Zhang</b>, Shaofei Qin, Yi Xu, Hongteng Xu<br>
-			In IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR 2020)
-		</li>
-	</ul>
+            <p>Prior to my PhD, I received my master's degree in engineering from Shanghai Jiao Tong University, my engineering degree from ENSTA Paris (equivalent to a master's degree), and my bachelor's degree from Shanghai Jiao Tong University.</p>
 
-	<h2>Software</h2>
-	<ul class="pub-spacing">
-		<li>
-	 		<b>Real time semantic slam in ROS with a hand held RGB-D camera</b><br>
-			<b>Xuan Zhang</b>, David Filliat<br>
-			Research intern at ENSTA Paris, url: <a href="https://github.com/floatlazer/semantic_slam" target="_blank">https://github.com/floatlazer/semantic_slam</a>
-		</li>
-	</ul>
+            <div class="job-alert">
+                I am currently on the 2026 job market.
+            </div>
+        </section>
+        
+        <section class="publications">
+            <h2>Publications</h2>
+            <ul class="item-list">
+                <li>
+                    <span class="item-title">Orbital Transformers for Predicting Wavefunctions in Time-Dependent Density Functional Theory</span>
+                    <span class="item-authors"><b>Xuan Zhang</b>, Haiyang Yu, Chengdong Wang, Jacob Helwig, Shuiwang Ji, Xiaofeng Qian</span>
+                    <span class="item-venue">International Conference on Learning Representations (ICLR 2026)</span>
+                </li>
+                <li>
+                    <span class="item-title">A Two-Phase Deep Learning Framework for Adaptive Time-Stepping in High-Speed Flow Modeling</span>
+                    <span class="item-authors">Jacob Helwig, Sai Sreeharsha Adavi, <b>Xuan Zhang</b>, Yuchao Lin, Felix S. Chim, Luke Takeshi Vizzini, Haiyang Yu, Muhammad Hasnain, Saykat Kumar Biswas, John J. Holloway, Narendra Singh, N. K. Anand, Swagnik Guhathakurta, Shuiwang Ji</span>
+                    <span class="item-venue">International Conference on Learning Representations (ICLR 2026)</span>
+                </li>
+                <li>
+                    <span class="item-title">SineNet: Learning Temporal Dynamics in Time-Dependent Partial Differential Equations</span>
+                    <span class="item-authors"><b>Xuan Zhang*</b>, Jacob Helwig*, Yuchao Lin, Yaochen Xie, Cong Fu, Stephan Wojtowytsch, Shuiwang Ji</span>
+                    <span class="item-venue">International Conference on Learning Representations (ICLR 2024)</span>
+                </li>
+                <li>
+                    <span class="item-title">Artificial Intelligence for Science in Quantum, Atomistic, and Continuum Systems</span>
+                    <span class="item-authors"><b>Xuan Zhang*</b>, Limei Wang*, Jacob Helwig*, Youzhi Luo*, Cong Fu*, Yaochen Xie*, Meng Liu, Yuchao Lin, Zhao Xu, Keqiang Yan, Keir Adams, Maurice Weiler, Xiner Li, Tianfan Fu, Yucheng Wang, Haiyang Yu, YuQing Xie, Xiang Fu, Alex Strasser, Shenglong Xu, Yi Liu, Yuanqi Du, Alexandra Saxton, Hongyi Ling, Hannah Lawrence, Hannes Stärk, Shurui Gui, Carl Edwards, Nicholas Gao, Adriana Ladera, Tailin Wu, Elyssa F. Hofgard, Aria Mansouri Tehrani, Rui Wang, Ameya Daigavane, Montgomery Bohde, Jerry Kurtin, Qian Huang, Tuong Phung, Minkai Xu, Chaitanya K. Joshi, Simon V. Mathis, Kamyar Azizzadenesheli, Ada Fang, Alán Aspuru-Guzik, Erik Bekkers, Michael Bronstein, Marinka Zitnik, Anima Anandkumar, Stefano Ermon, Pietro Liò, Rose Yu, Stephan Günnemann, Jure Leskovec, Heng Ji, Jimeng Sun, Regina Barzilay, Tommi Jaakkola, Connor W. Coley, Xiaoning Qian, Xiaofeng Qian, Tess Smidt, Shuiwang Ji</span>
+                    <span class="item-venue">Foundations and Trends in Machine Learning | <a href="https://www.air4.science" target="_blank">https://www.air4.science</a></span>
+                </li>
+                <li>
+                    <span class="item-title">Group Equivariant Fourier Neural Operators for Partial Differential Equations</span>
+                    <span class="item-authors">Jacob Helwig*, <b>Xuan Zhang*</b>, Cong Fu, Jerry Kurtin, Stephan Wojtowytsch, Shuiwang Ji</span>
+                    <span class="item-venue">International Conference on Machine Learning (ICML 2023)</span>
+                </li>
+                <li> 
+                    <span class="item-title">A Score-Based Model for Learning Neural Wavefunctions</span>
+                    <span class="item-authors"><b>Xuan Zhang</b>, Shenglong Xu, Shuiwang Ji</span>
+                    <span class="item-venue">arXiv:2305.16540</span>
+                </li>
+                <li>
+                    <span class="item-title">Lattice Convolutional Networks for Learning Ground states of Quantum Many-Body Systems</span>
+                    <span class="item-authors">Cong Fu*, <b>Xuan Zhang*</b>, Shenglong Xu, Shuiwang Ji</span>
+                    <span class="item-venue">SIAM International Conference on Data Mining (SDM 2023)</span>
+                </li>
+                <li>
+                    <span class="item-title">Fast Quantum Property Prediction via Deeper 2D and 3D Graph Networks</span>
+                    <span class="item-authors">Meng Liu*, Cong Fu*, <b>Xuan Zhang</b>, Limei Wang, Yaochen Xie, Hao Yuan, Youzhi Luo, Zhao Xu, Shenglong Xu, Shuiwang Ji</span>
+                    <span class="item-venue">Tech Report, KDD Cup 2021, Runner-up award on OGB-LSC</span>
+                </li>
+                <li>
+                    <span class="item-title">Quaternion Product Units for Deep Learning on 3D Rotation Groups</span>
+                    <span class="item-authors"><b>Xuan Zhang</b>, Shaofei Qin, Yi Xu, Hongteng Xu</span>
+                    <span class="item-venue">IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR 2020)</span>
+                </li>
+            </ul>
+        </section>
 
-	<h2>Slides</h2>
-	<ul class="pub-spacing">
-		<li>
-	 		<b>SineNet presentation at <a href="https://ai4sciencetalks.github.io/projects/sinenet_neural_pde_solver_xzhang/" target="_blank">AI4Science Talks</a></b> [<a href="https://docs.google.com/presentation/d/19BqhODJ1r2vWTKjo6F_30G7eC8LHEJ6YFnnA8omW_VI/edit?usp=sharing">slides</a>]<br>
-		</li>
-	</ul>
-	
+        <section class="software">
+            <h2>Software</h2>
+            <ul class="item-list">
+                <li>
+                    <span class="item-title">Real time semantic slam in ROS with a hand held RGB-D camera</span>
+                    <span class="item-authors"><b>Xuan Zhang</b>, David Filliat</span>
+                    <span class="item-venue">Research intern at ENSTA Paris | URL: <a href="https://github.com/floatlazer/semantic_slam" target="_blank">GitHub Repository</a></span>
+                </li>
+            </ul>
+        </section>
+
+        <section class="slides">
+            <h2>Slides</h2>
+            <ul class="item-list">
+                <li>
+                    <span class="item-title">SineNet presentation at <a href="https://ai4sciencetalks.github.io/projects/sinenet_neural_pde_solver_xzhang/" target="_blank">AI4Science Talks</a></span>
+                    <span class="item-venue">[<a href="https://docs.google.com/presentation/d/19BqhODJ1r2vWTKjo6F_30G7eC8LHEJ6YFnnA8omW_VI/edit?usp=sharing" target="_blank">View Slides</a>]</span>
+                </li>
+            </ul>
+        </section>
+    </main>
+
 </div>
 </body>
 </html>
