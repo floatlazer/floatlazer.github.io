@@ -108,14 +108,20 @@
             font-weight: 600;
         }
 
-        /* Job Market Alert */
+        /* Add this to target paragraphs specifically in the bio */
+        .bio p {
+            margin-top: 0.5rem;
+            margin-bottom: 0.3rem; /* Reduced from the default 1.2rem */
+        }
+
+        /* Update the Job Market Alert margins */
         .job-alert {
-            background-color: #e6f2ff; /* Light blue background */
-            border-left: 4px solid #0066cc; /* Solid blue border */
+            background-color: #e6f2ff;
+            border-left: 4px solid #0066cc;
             padding: 12px 20px;
-            margin: 20px 0;
+            margin: 10px 0 5px 0; /* Changed from 20px 0: top margin is now 10px */
             border-radius: 4px;
-            color: #004080; /* Dark blue text */
+            color: #004080;
             font-weight: 500;
             display: inline-block;
         }
