@@ -54,20 +54,25 @@
         /* Profile Header */
         header {
             display: flex;
-            align-items: center;
-            gap: 40px;
+            align-items: flex-start; /* Changed from center to top-align */
+            gap: 30px;               /* Adjusted for better breathing room */
             margin-bottom: 30px;
             padding-bottom: 30px;
             border-bottom: 1px solid #eeeeee;
         }
 
         .profile-img {
-            width: 200px;
-            height: 200px;
+            width: 150px;  /* A better middle-ground size */
+            height: 150px;
             object-fit: cover;
-            border-radius: 50%; /* This keeps the circular crop */
-            border: none;       /* Removes the 3px grey boundary */
-            box-shadow: none;   /* Removes the drop shadow boundary */
+            border-radius: 50%;
+            border: none; 
+            box-shadow: none;
+            flex-shrink: 0; /* Prevents the image from squishing if the screen gets small */
+        }
+
+        .profile-info {
+            margin-top: -5px; /* Slight nudge up to visually align the text with the top of the circle */
         }
 
         .profile-info h1 {
@@ -94,7 +99,7 @@
         }
 
         .social-links {
-            margin-top: 15px;
+            margin-top: 5px;
             font-size: 0.95rem;
         }
         
